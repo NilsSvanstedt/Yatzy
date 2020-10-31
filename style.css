@@ -1,4 +1,5 @@
 table {
+  background-color: white;
   border-collapse: collapse;
   text-align: center;
   empty-cells: show;
@@ -12,4 +13,22 @@ td {
 
 .titel {
   width: 100px;
+}
+
+.col {
+  margin-top: 100px;
+}
+
+#tärningar img {
+  width: 80px;
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Bevara asspect ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
