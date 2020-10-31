@@ -32,3 +32,8 @@ td {
   min-width: 100%;
   min-height: 100%;
 }
+
+button.kastaTärningar {
+  display: block;
+  margin: 5% auto;
+}
