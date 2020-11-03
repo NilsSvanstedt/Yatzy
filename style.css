@@ -16,11 +16,12 @@ td {
 }
 
 .col {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #tärningar img {
-  width: 80px;
+  width: 30%;
+  max-width: 80px;
 }
 
 #bg {
