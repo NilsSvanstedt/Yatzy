@@ -17,6 +17,20 @@
     <!--#region protokoll-->
     <div class="col">
       <table>
+          <select id="antalSpelare" name="antalSpelare">
+          <option value="0">
+              Välj
+          </option>
+          <option value="1">
+              1
+          </option>
+          <option value="2">
+              2
+          </option>
+          <option value="3">
+              3
+          </option>
+      </select>
       <tr>
         <td class="titel"><b>Spelare</b></td>
         <td></td>
@@ -137,12 +151,11 @@
     <!--#region tärningar-->
     <div class="col">
       <div class="text-center" id="tärningar">
-        <img id="tärningEtt">
-        <img id="tärningTvå">
-        <img id="tärningTre">
-        <img id="tärningFyra">
-        <img id="tärningFem">
-        <img id="tärningSex">
+        <img id="tärning0" class="tärning" src="img/1.png">
+        <img id="tärning1" class="tärning" src="img/2.png"">
+        <img id="tärning2" class="tärning" src="img/3.png">
+        <img id="tärning3" class="tärning" src="img/4.png">
+        <img id="tärning4" class="tärning" src="img/5.png">
         <button type="button" class="btn btn-primary btn-lg kastaTärningar" onclick="kastaTärning();">Kasta tärningar</button>
       </div>
     </div>
