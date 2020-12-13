@@ -29,7 +29,7 @@ td {
   top: 0; 
   left: 0; 
 	
-  /* Bevara asspect ratio */
+  /* Bevara aspect ratio */
   min-width: 100%;
   min-height: 100%;
 }
@@ -37,4 +37,12 @@ td {
 button.kastaTärningar {
   display: block;
   margin: 5% auto;
+}
+
+#inställningar {
+  color: white;
+}
+
+img.clickable, td.clickable {
+  cursor: pointer;
 }
