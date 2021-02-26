@@ -1,7 +1,21 @@
-// window.onload = kastaTärning;
-let tärningar = [];
+let tärningar = [0,0,0,0,0];
 const t = new Set(tärningar); // Set objekt är en samling av unika värden
+window.onload = kastaTärningar(tärningar);
 
+function kastaTärningar(tärningar) {
+  for (i = 0; i < 5; i++) {
+    if (document.getElementById("tärning" + i).style.filter == "") {
+      tärningar[i] = Math.floor(Math.random()*6 + 1); 
+    }
+  }
+  uppdateraTärningar(tärningar);
+}
+
+function uppdateraTärningar(tärningar) {
+  for (i = 0; i < 5; i++) {
+    document.getElementById("tärning" + i).src = ("img/" + tärningar[i] + ".png");
+  }
+}
 
 function ärEttPar(tärningar) {
   return tärningar.length === 5 && !(t.size === 5); // Retunerna sant om det finns 5 tärningar och alla värden inte är unika. T.ex (2,2,1,6,5)
@@ -23,7 +37,7 @@ function ärFyrTal(tärningar) {
 }
 
 function ärLitenStege(tärningar) {
-  return tärningar.length === 5 && t.size === 5 && !t.has(6); // Returnera sant om det finns 5 tärningar och 5 av dem är unika samt att 6 inte är en av dem. (1,2,3,4,5)
+  return tärningar.length === 5 && t.size === 5 && !t.has(6); // Returnera sant om det finns 5 tärn ingar och 5 av dem är unika samt att 6 inte är en av dem. (1,2,3,4,5)
 }
 
 function ärStorStege(tärningar) {
