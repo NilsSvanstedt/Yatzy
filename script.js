@@ -1,9 +1,18 @@
-let tärningar = [3,4,4,4,4];
+let tärningar = [];
 uppdateraTärningar(tärningar);
 let kastKvar = 3;
+let ettor = document.getElementById("ettor");
+let tvåor = document.getElementById("tvåor");
+let treor = document.getElementById("treor");
+let fyror = document.getElementById("fyror");
+let femmor = document.getElementById("femmor");
+let sexor = document.getElementById("sexor");
+let summaEtt = document.getElementById("summaEtt");
+let bonus = document.getElementById("bonus");
+
 const t = new Set(tärningar); // Set objekt är en samling av unika värden
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//window.onload = kastaTärningar(tärningar);
+window.onload = kastaTärningar(tärningar);
 
 function kastaTärningar(tärningar) {
   if (kastKvar > 0) {
@@ -14,6 +23,7 @@ function kastaTärningar(tärningar) {
     }
     kastKvar--;
     uppdateraTärningar(tärningar);
+    console.log(document.getElementById("ettor").innerHTML);
  }
 }
 
@@ -124,6 +134,17 @@ function klickHanterare() {
           this.innerHTML = 0;
         }
     }
+    if (ettor.innerHTML !== "" && tvåor.innerHTML !== "" && treor.innerHTML !== "" && fyror.innerHTML !== "" && femmor.innerHTML !== "" && sexor.innerHTML !== "") {
+      summaEtt.innerHTML = parseInt(ettor.innerHTML, 10) + parseInt(tvåor.innerHTML,10) + parseInt(treor.innerHTML, 10) + parseInt(fyror.innerHTML, 10) + parseInt(femmor.innerHTML,10) + parseInt(sexor.innerHTML, 10); 
+      if (summaEtt >= 63) {
+        bonus.innerHTML = 50;
+      } else {
+        bonus.innerHTML = 0;
+      }
+    }
+
+    kastaTärningar(tärningar);
+    kastKvar = 2;
   }
 }
 document.querySelectorAll('#yatzyProtokoll td')
@@ -136,6 +157,10 @@ function låsTärning() {
   } else {
     document.getElementById(id).style.filter = "";
   }
+}
+
+function låsUppTärningar(tärningar) {
+
 }
 document.querySelectorAll('#tärningar img')
 .forEach(e => e.addEventListener("click", låsTärning));
