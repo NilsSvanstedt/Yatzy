@@ -92,16 +92,40 @@ function klickHanterare() {
     } else if (this.getAttribute("class").includes("summaEtt")) {
       
     } else if (this.getAttribute("class").includes("ettPar")) {
-
+      if (ärEttPar(tärningar)) {
+        tärningar.sort();
+        if (tärningar[4] === tärningar[3]) {
+          this.innerHTML = tärningar[4] * 2;
+        } else if (tärningar[3] === tärningar[2]) {
+          this.innerHTML = tärningar[3] * 2;
+        } else {
+          this.innerHTML = tärningar[2] * 2;
+        }
+      }
     } else if (this.getAttribute("class").includes("tvåPar")) {
-      
+      if (ärTvåPar(tärningar)) {
+        tärningar.sort();
+        if (tärningar[0] === tärningar[1] && tärningar[2] === tärningar[3]) {
+          this.innerHTML = tärningar[0] + tärningar[1] + tärningar[2] + tärningar[3];
+        } else if (tärningar[0] === tärningar[1] && tärningar[3] === tärningar[4]) {
+          this.innerHTML = tärningar[0] + tärningar[1] + tärningar[3] + tärningar[4];
+        } else {
+          this.innerHTML = tärningar[1] + tärningar[2] + tärningar[3] + tärningar[4];
+        }
+      } else {
+        this.innerHTML = 0;
+      }
     } else if (this.getAttribute("class").includes("treTal")) {
       if (ärTreTal(tärningar)) {
+        tärningar.sort();
         this.innerHTML = tärningar[3] * 3;
       }
     } else if (this.getAttribute("class").includes("fyrTal")) {
       if (ärFyrTal(tärningar)) {
+        tärningar.sort();
         this.innerHTML = tärningar[3] * 4;
+      } else {
+        this.innerHTML = 0;
       }
     } else if (this.getAttribute("class").includes("litenStege")) {
         if (ärLitenStege(tärningar)) {
@@ -142,7 +166,8 @@ function klickHanterare() {
         bonus.innerHTML = 0;
       }
     }
-
+    låsUppTärningar();
+    
     kastaTärningar(tärningar);
     kastKvar = 2;
   }
@@ -159,8 +184,10 @@ function låsTärning() {
   }
 }
 
-function låsUppTärningar(tärningar) {
-
+function låsUppTärningar() {
+  for (i = 0; i < 5; i++) {
+    document.getElementById("tärning" + i).style.filter = "";
+  }
 }
 document.querySelectorAll('#tärningar img')
 .forEach(e => e.addEventListener("click", låsTärning));
