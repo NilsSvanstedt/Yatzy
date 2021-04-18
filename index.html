@@ -20,133 +20,87 @@
       <div class="row">
         <!--#region protokoll-->
         <div class="col">
-          <table id="yatzyProtokoll">
-            <select id="antalSpelare" name="antalSpelare">
-              <option value="0">Välj</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <tr>
-              <td class="titel"><b>Spelare</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+          <table id="yatzyProtokoll"> <!-- Yatzyprotokollet -->
             <tr>
               <td class="titel">Ettor</td>
-              <td id="ettor" class="ettor spelare1"></td>
-              <td class="ettor spelare2"></td>
-              <td class="ettor spelare3"></td>
+              <td id="ettor" class="ettor"></td>
             </tr>
             <tr>
               <td class="titel">Tvåor</td>
-              <td id="tvåor" class="tvåor spelare1"></td>
-              <td class="tvåor spelare2"></td>
-              <td class="tvåor spelare3"></td>
+              <td id="tvåor" class="tvåor"></td>
             </tr>
             <tr>
               <td class="titel">Treor</td>
-              <td id="treor" class="treor spelare1"></td>
-              <td class="treor spelare2"></td>
-              <td class="treor spelare3"></td>
+              <td id="treor" class="treor"></td>
             </tr>
             <tr>
               <td class="titel">Fyror</td>
-              <td id="fyror" class="fyror spelare1"></td>
-              <td class="fyror spelare2"></td>
-              <td class="fyror spelare3"></td>
+              <td id="fyror" class="fyror"></td>
             </tr>
             <tr>
               <td class="titel">Femmor</td>
-              <td id="femmor" class="femmor spelare1"></td>
-              <td class="femmor spelare2"></td>
-              <td class="femmor spelare3"></td>
+              <td id="femmor" class="femmor"></td>
             </tr>
             <tr>
               <td class="titel">Sexor</td>
-              <td id="sexor" class="sexor spelare1"></td>
-              <td class="sexor spelare2"></td>
-              <td class="sexor spelare3"></td>
+              <td id="sexor" class="sexor"></td>
             </tr>
             <tr>
               <td class="titel"><b>Summa</b></td>
-              <td id="summaEtt" class="summaEtt spelare1"></td>
-              <td class="summaEtt spelare2"></td>
-              <td class="summaEtt spelare3"></td>
+              <td id="summaEtt" class="summaEtt"></td>
             </tr>
             <tr>
               <td class="titel">Bonus</td>
-              <td id="bonus" class="bonus spelare1"></td>
-              <td class="bonus spelare2"></td>
-              <td class="bonus spelare3"></td>
+              <td id="bonus" class="bonus"></td>
             </tr>
             <tr>
-              <td class="titel">1 par</td>
-              <td class="ettPar spelare1"></td>
-              <td class="ettPar spelare2"></td>
-              <td class="ettPar spelare3"></td>
+              <td class="titel">Ett par</td>
+              <td id="ettPar" class="ettPar"></td>
             </tr>
             <tr>
-              <td class="titel">2 par</td>
-              <td class="tvåPar spelare1"></td>
-              <td class="tvåPar spelare2"></td>
-              <td class="tvåPar spelare3"></td>
+              <td class="titel">Två par</td>
+              <td id="tvåPar" class="tvåPar"></td>
             </tr>
             <tr>
               <td class="titel">Tretal</td>
-              <td class="treTal spelare1"></td>
-              <td class="treTal spelare2"></td>
-              <td class="treTal spelare3"></td>
+              <td id="treTal" class="treTal"></td>
             </tr>
             <tr>
               <td class="titel">Fyrtal</td>
-              <td class="fyrTal spelare1"></td>
-              <td class="fyrTal spelare2"></td>
-              <td class="fyrTal spelare3"></td>
+              <td id="fyrTal" class="fyrTal"></td>
             </tr>
             <tr>
               <td class="titel">Liten stege</td>
-              <td class="litenStege spelare1"></td>
-              <td class="litenStege spelare2"></td>
-              <td class="litenStege spelare3"></td>
+              <td id="litenStege" class="litenStege"></td>
             </tr>
             <tr>
               <td class="titel">Stor stege</td>
-              <td class="storStege spelareEtt"></td>
-              <td class="storStege spelareTvå"></td>
-              <td class="storStege spelareTre"></td>
+              <td id="storStege" class="storStege"></td>
             </tr>
             <tr>
               <td class="titel">Kåk</td>
-              <td class="kåk spelareEtt"></td>
-              <td class="kåk spelareTvå"></td>
-              <td class="kåk spelareTre"></td>
+              <td id="kåk" class="kåk"></td>
             </tr>
             <tr>
               <td class="titel">Chans</td>
-              <td class="chans spelareEtt"></td>
-              <td class="chans spelareTvå"></td>
-              <td class="chans spelareTre"></td>
+              <td id="chans" class="chans"></td>
             </tr>
             <tr>
               <td class="titel">YATZY</td>
-              <td class="yatzy spelareEtt"></td>
-              <td class="yatzy spelareTvå"></td>
-              <td class="yatzy spelareTre"></td>
+              <td id="yatzy" class="yatzy"></td>
             </tr>
             <tr>
               <td class="titel"><b>Summa</b></td>
-              <td class="summaTvå spelareEtt"></td>
-              <td class="summaTvå spelareTvå"></td>
-              <td class="summaTvå spelareTre"></td>
+              <td id="summaTvå" class="summaTvå"></td>
             </tr>
           </table>
+          <br>
+          <button id="spelaIgen" onclick="location.reload()" type="button" class="btn btn-success">Spela igen?</button> <!-- Knapp som visas när yatzyspelet är färdigt, klicka för att ladda om sidan -->
         </div>
         <!--#endregion-->
         <!--#region tärningar-->
         <div class="col">
-          <div class="text-center" id="tärningar">
+          <div class="text-center" id="tärningar"> <!-- Tärningar för spelet med bilder-->
             <img
               id="tärning0"
               class="tärning clickable"

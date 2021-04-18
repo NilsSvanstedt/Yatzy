@@ -46,3 +46,7 @@ button.kastaTärningar {
 img.clickable, td.clickable {
   cursor: pointer;
 }
+
+#spelaIgen {
+  visibility: hidden;
+}
